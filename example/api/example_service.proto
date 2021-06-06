@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/romannikov/services/example";
+
+package example;
+
+service Example {
+  rpc Exam(ExampleRequest) returns (ExampleResponse);
+}
+
+message ExampleRequest {
+  uint64 id = 1;
+}
+
+message ExampleResponse {
+  uint64 result = 1;
+}
